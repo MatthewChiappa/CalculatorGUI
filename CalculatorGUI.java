@@ -15,14 +15,14 @@ public class CalculatorGUI implements ActionListener, KeyListener {
   JButton[] buttons = new JButton[10];
   JButton per = new JButton(".");
   JButton equ = new JButton("=");
+  JButton add = new JButton("+");
+  JButton sub = new JButton("-");
+  JButton mult = new JButton("X");
+  JButton div = new JButton("/");
   JButton c = new JButton("C");
   
   public CalculatorGUI() {
     
-    JButton add = new JButton("+");
-    JButton sub = new JButton("-");
-    JButton mult = new JButton("X");
-    JButton div = new JButton("/");
     JFrame frame = new JFrame();
     JPanel button = new JPanel();
     JPanel text = new JPanel();
@@ -111,6 +111,10 @@ public class CalculatorGUI implements ActionListener, KeyListener {
           buttons[i].setEnabled(true);
         per.setEnabled(true);
         equ.setEnabled(true);
+        add.setEnabled(true);
+        sub.setEnabled(true);
+        mult.setEnabled(true);
+        div.setEnabled(true);
       }
       else if (((JButton)e.getSource()).getText().equals("+")){
         addBool = true;
@@ -124,6 +128,10 @@ public class CalculatorGUI implements ActionListener, KeyListener {
           buttons[i].setEnabled(true);
         per.setEnabled(true);
         equ.setEnabled(true);
+        add.setEnabled(false);
+        sub.setEnabled(false);
+        mult.setEnabled(false);
+        div.setEnabled(false);
       }
       else if (((JButton)e.getSource()).getText().equals("-")){
         subBool = true;
@@ -137,6 +145,10 @@ public class CalculatorGUI implements ActionListener, KeyListener {
           buttons[i].setEnabled(true);
         per.setEnabled(true);
         equ.setEnabled(true);
+        add.setEnabled(false);
+        sub.setEnabled(false);
+        mult.setEnabled(false);
+        div.setEnabled(false);
       }
       else if (((JButton)e.getSource()).getText().equals("X")){
         multBool = true;
@@ -150,6 +162,10 @@ public class CalculatorGUI implements ActionListener, KeyListener {
           buttons[i].setEnabled(true);
         per.setEnabled(true);
         equ.setEnabled(true);
+        add.setEnabled(false);
+        sub.setEnabled(false);
+        mult.setEnabled(false);
+        div.setEnabled(false);
       }
       else if (((JButton)e.getSource()).getText().equals("/")){
         divBool = true;
@@ -163,6 +179,10 @@ public class CalculatorGUI implements ActionListener, KeyListener {
           buttons[i].setEnabled(true);
         per.setEnabled(true);
         equ.setEnabled(true);
+        add.setEnabled(false);
+        sub.setEnabled(false);
+        mult.setEnabled(false);
+        div.setEnabled(false);
       }
       else if (((JButton)e.getSource()).getText().equals("=")){
         double sum = 0;
@@ -193,6 +213,10 @@ public class CalculatorGUI implements ActionListener, KeyListener {
           buttons[i].setEnabled(false);
         per.setEnabled(false);
         equ.setEnabled(false);
+        add.setEnabled(true);
+        sub.setEnabled(true);
+        mult.setEnabled(true);
+        div.setEnabled(true);
       }
       else if (((JButton)e.getSource()).getText().equals(".")){
         if(!dec) {
